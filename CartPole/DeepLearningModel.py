@@ -9,4 +9,5 @@ def deep_learning_model(X, y):
     model.add(layer.Dense(units=2, activation='relu'))
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
+    model.save('CartPoleBot.hf')
     return model
